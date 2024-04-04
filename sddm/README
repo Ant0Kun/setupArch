@@ -1,0 +1,2 @@
+copy themes folder to /usr/share/sddm/
+copy sddm.conf to ~/.config/
