@@ -16,36 +16,25 @@
 	"disk",
 	"hyprland/window"
     ],
-    "modules-center": [
-	    "clock",
-        "custom/poweroff_btn"
-    ],
+    "modules-center": ["clock","custom/power_btn", "custom/lock"],
     "modules-right": [
         "tray",
         "pulseaudio",
         "temperature",
         "battery"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-     //"disable-scroll": true,
-       //  "all-outputs": true,
-         //"warp-on-scroll": false,
-         //"format": "{name}: {icon}",
-         //"format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    
     "custom/power_btn": {
-        "format": "⏼",
-        "onclick": "poweroff"
+        "format": "",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+    "custom/lock": {
+        "format":"🔒",
+        "on-click": "hyprlock",
+        "tooltip": false
+
     },
     "tray": {
         // "icon-size": 21,

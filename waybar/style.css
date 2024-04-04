@@ -65,7 +65,8 @@ tooltip label {
 }
 
 #clock,
-#custom-power,
+#custom-power_btn,
+#custom-lock,
 #battery,
 #cpu,
 #memory,
@@ -86,12 +87,20 @@ tooltip label {
 }
 
 #clock {
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: 0px;
 }
 #custom-power_btn {
-    margin-right: 10px;
+    border-radius: 0px 0px 0px 0px;
+    margin-left: 0px;
+    
+    
 }
-#tray, #custom-power_btn/*, #temperature, #cpu*/ {
+#custom-lock {
+    border-radius: 0px 10px 10px 0px;
+    
+}
+#tray{
     border-radius: 10px;
 }
 
