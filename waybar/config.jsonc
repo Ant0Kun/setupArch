@@ -16,12 +16,15 @@
 	"disk",
 	"hyprland/window"
     ],
-    "modules-center": ["clock","custom/power_btn", "custom/lock"],
+    "modules-center": ["clock"],
     "modules-right": [
         "tray",
         "pulseaudio",
         "temperature",
-        "battery"
+        "battery",
+        "custom/power_btn",
+        "custom/lock"
+
     ],
     
     "custom/power_btn": {
