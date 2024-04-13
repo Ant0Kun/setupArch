@@ -42,29 +42,32 @@ makepkg -si
 echo "Hyprland will now be installed, check README for details..."
 sleep 3
 
-yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop pipewire-pulse pipewire-alsa pipewire alsa-firmware
+yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop pipewire-pulse pipewire-alsa pipewire alsa-firmware sddm firefox ttf-jetbrains-mono-nerd otf-font-awesome wlogout
 
 sudo systemctl enable sddm
 
 #Hyprland dotfiles 
 
 rm -rf ~/.config/hypr
-ln -s ./hypr ~/.config/hypr 
+cp -rf ./hypr ~/.config/hypr 
 
 rm -rf ~/.config/waybar/ 
-ln -s ./waybar ~/.config/waybar
+cp -rf ./waybar ~/.config/waybar
 
 rm -rf ~/.config/alacritty/ 
-ln -s ./alacritty ~/.config/alacritty 
+cp -rf ./alacritty ~/.config/alacritty 
 
 rm -rf /etc/sddm.conf
-ln -s ./sddm/sddm.conf /etc/sddm.conf
+cp -rf ./sddm/sddm.conf /etc/sddm.conf
 cp -rf ./sddm/themes/ /usr/share/sddm/
 
 rm -rf ~/.config/wofi/ 
-ln -s ./wofi ~/.config/wofi 
+cp -rf -s ./wofi ~/.config/wofi 
 
-rm ~/.config/wlogout/ 
-ln -s ./wlogout/ ~/.cionfig/wlogout
+rm -rf ~/.config/wlogout/ 
+cp -rf ./wlogout/ ~/.cionfig/wlogout
+
+rm -rf ~/.config/dunst/ 
+cp -rf ./dunst/ ~/.config/
 
 echo "reboot"
