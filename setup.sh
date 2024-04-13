@@ -42,12 +42,18 @@ makepkg -si
 echo "Hyprland will now be installed, check README for details..."
 sleep 3
 
-yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop
+yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop pipewire-pulse pipewire-alsa pipewire alsa-firmware
 
-
+sudo systemctl enable sddm
 
 #Hyprland dotfiles 
 
-cp -r ./hypr/ ~/.config/
-cp -r ./waybar/ ~/.config/
-cp -r ./alacritty/ ~/.config/
+cp -rf ./hypr/ ~/.config/
+cp -rf ./waybar/ ~/.config/
+cp -rf ./alacritty/ ~/.config/
+cp -rf ./sddm/sddm.conf /etc/
+cp -rf ./sddm/themes/ /usr/share/sddm/
+cp -rf ./wofi/ ~/.config/
+cp -rf ./wlogout/ ~/.config/wlogout/
+
+echo "reboot"
