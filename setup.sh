@@ -42,7 +42,7 @@ makepkg -si
 echo "Hyprland will now be installed, check README for details..."
 sleep 3
 
-yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop pipewire-pulse pipewire-alsa pipewire alsa-firmware sddm firefox ttf-jetbrains-mono-nerd otf-font-awesome wlogout
+yay -S hyprland wofi waybar wayland mesa lib32-mesa xdg-desktop-portal-hyprland xdg-utils xdg-user-dirs xdg-desktop-portal polkit-gnome wlroots vulkan-headers vulkan-radeon qt6-wayland qt5-wayland pavucontrol network-manager-applet neovim neofetch nautilus man-db linux-zen-headers alacritty dosfstools hyprpaper hyprlock gtk3 gtk4 fuse dunst btop pipewire-pulse pipewire-alsa pipewire alsa-firmware sddm firefox ttf-jetbrains-mono-nerd otf-font-awesome wlogout lib32-vulkan-radeon flatpak
 
 sudo systemctl enable sddm
 
