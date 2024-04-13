@@ -48,12 +48,23 @@ sudo systemctl enable sddm
 
 #Hyprland dotfiles 
 
-cp -rf ./hypr/ ~/.config/
-cp -rf ./waybar/ ~/.config/
-cp -rf ./alacritty/ ~/.config/
-cp -rf ./sddm/sddm.conf /etc/
+rm -rf ~/.config/hypr
+ln -s ./hypr ~/.config/hypr 
+
+rm -rf ~/.config/waybar/ 
+ln -s ./waybar ~/.config/waybar
+
+rm -rf ~/.config/alacritty/ 
+ln -s ./alacritty ~/.config/alacritty 
+
+rm -rf /etc/sddm.conf
+ln -s ./sddm/sddm.conf /etc/sddm.conf
 cp -rf ./sddm/themes/ /usr/share/sddm/
-cp -rf ./wofi/ ~/.config/
-cp -rf ./wlogout/ ~/.config/wlogout/
+
+rm -rf ~/.config/wofi/ 
+ln -s ./wofi ~/.config/wofi 
+
+rm ~/.config/wlogout/ 
+ln -s ./wlogout/ ~/.cionfig/wlogout
 
 echo "reboot"
